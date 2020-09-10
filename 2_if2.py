@@ -21,13 +21,13 @@ def main():
     В ней надо заменить pass на ваш код
     """
     def str_compare(str1, str2):
-      if type(str1) and type(str2) != str:
+      if type(str1) != str or type(str2) != str:
         return 0
       elif str1 == str2:
         return 1
-      elif len(str1)>len(str2):
+      elif len(str1) > len(str2):
         return 2
-      elif str1 != str2 and str2 == 'learn':
+      elif str2 == 'learn':
         return 3
       else:
         return 'Поздравляю ты меня удивил'
