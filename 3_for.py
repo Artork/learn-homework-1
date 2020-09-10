@@ -29,17 +29,16 @@ def main():
       pupol =  len(scool_10[i]['scores'])
       sum_scores += scores
       sum_pupol += pupol
-    print(sum_scores)
-    print(sum_pupol)
-    print(sum_scores/sum_pupol)
+    print('Средняя оценка в школе: ', sum_scores/sum_pupol)
     
+   
+    for i in range(len(scool_10)):
+      score_class = sum(scool_10[i]['scores'])
+      pupol_class = len(scool_10[i]['scores'])
+      print('В классе ', scool_10[i]['school_class'], 'Средняя оценка: ', score_class/pupol_class)
 
-    #for i in range(len(scool_10)):
-    # pupol =  len(scool_10[i]['scores'])
-    # sum_pupol += pupol
-    #print(sum_pupol)
-    #print(sum_scores)
-      
+
+   
 
 
 
