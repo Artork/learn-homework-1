@@ -30,12 +30,13 @@ print ('Привет, давай пообщаемся. Вот список во�
 for key in ask_dict:
   print(key)
 print ('Если надоест просто напиши: Пока')
-def ask_user_dict():
-  while True:
-    user_say = input('Задай свой вопрос?: ')
-    print(ask_dict[user_say])  
-    if user_say == 'Пока':
-      break
- 
+
+while True:
+  user_say = input('Задай свой вопрос?: ')
+  if user_say == 'Пока':
+    break
+  else:
+    print(ask_dict[user_say])
+
 if __name__ == "__main__":
     ask_user()
