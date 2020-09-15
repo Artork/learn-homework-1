@@ -24,13 +24,13 @@ def main():
     def age_activities(user_age):
       if user_age < 0:
         return 'Кажется ты еще не родился...'
-      elif 0 <= useg_age <= 7:
+      elif 0 <= user_age <= 7:
          return "Не торопись)"
-      elif 3 < useg_age <= 7:
+      elif 3 < user_age <= 7:
         return 'Пора в детский сад'
-      elif 7 < useg_age <= 18:
+      elif 7 < user_age <= 18:
         return 'Учится, учится и еще раз учится!'
-      elif 18 < useg_age <= 23:
+      elif 18 < user_age <= 23:
         return 'Самое время задуматься о высшем образовании или идти работать'
       else:
         return 'Думаю в таком возрасте ты сам можешь решить чем заняться)'
