@@ -41,28 +41,19 @@ def greet_user(update, context):
     update.message.reply_text('Hello World')
 
 def find_constellation (update, context):
-  print('planet')
-  user_text = update.message.text
-  print(user_text)
 
   planet_dict = {
-    'Mercury': ephem.Mercury('2000/01/01'),
-    'Venus': ephem.Venus('2000/01/01'),
-    'Moon': ephem.Moon('2000/01/01'),
-    'Mars': ephem.Mars('2000/01/01'),
-    'Jupiter': ephem.Jupiter('2000/01/01'),
-    'Uranus': ephem.Uranus('2000/01/01'),
-    'Neptune': ephem.Neptune('2000/01/01'),
-    'Pluto': ephem.Pluto('2000/01/01')
-    }
-  planet = user_text.split()[1]
-  planetlow = planet.lower()
-  print(f'Пользователь выбрал планету {planetlow}')
-  from_planet_dict = planet_dict[planetlow]
-  planet1 = planet_dict[planetlow]
-  print(planet1)
-  constallation = ephem.constellation(planet1)
-  update.message.reply_text(f'планета {planet} находилась 1 января 2000 года в созвездии {constallation[1]}')
+    'mercury': ephem.Mercury('2000/01/01'),
+    'menus': ephem.Venus('2000/01/01'),
+    'moon': ephem.Moon('2000/01/01'),
+    'mars': ephem.Mars('2000/01/01'),
+    'jupiter': ephem.Jupiter('2000/01/01'),
+    'uranus': ephem.Uranus('2000/01/01'),
+    'neptune': ephem.Neptune('2000/01/01'),
+    'pluto': ephem.Pluto('2000/01/01')
+}
+  planet = planet_dict[context.args[0].lower()]
+  update.message.reply_text(f'планета {context.args[0]} находилась 1 января 2000 года в созвездии {(ephem.constellation(planet)[1])}')
 
   
   
