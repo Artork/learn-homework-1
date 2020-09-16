@@ -24,9 +24,9 @@ def main():
 
     sum_scores = 0
     sum_pupol = 0
-    for i in range(len(scool_10)):
-      scores = sum(scool_10[i]['scores'])
-      pupol =  len(scool_10[i]['scores'])
+    for item in scool_10:
+      scores = sum(item['scores'])
+      pupol =  len(item['scores'])
       sum_scores += scores
       sum_pupol += pupol
     print('Средняя оценка в школе: ', sum_scores/sum_pupol)
